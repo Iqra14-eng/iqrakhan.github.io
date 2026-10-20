@@ -1,34 +1,420 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Your Name</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Your Name | Academic Website</title>
+  <meta name="description"
+        content="Academic website of Your Name, including research, publications, education, and CV.">
+
   <style>
-    body {
-      font-family: Georgia, serif;
-      max-width: 800px;
-      margin: 40px auto;
-      line-height: 1.6;
+    /* General layout */
+    * {
+      box-sizing: border-box;
     }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 35px 28px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 16px;
+      line-height: 1.75;
+      color: #292929;
+      background: #ffffff;
+    }
+
+    a {
+      color: #174f86;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 28px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid #dddddd;
+    }
+
     h1 {
-      font-size: 32px;
+      margin: 0 0 5px;
+      font-size: 2.1rem;
+      line-height: 1.25;
+      font-weight: normal;
+      letter-spacing: -0.5px;
+    }
+
+    .affiliation {
+      margin: 0;
+      color: #666666;
+      font-size: 0.96rem;
+    }
+
+    .profile-photo {
+      width: 115px;
+      height: 135px;
+      object-fit: cover;
+      border-radius: 3px;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 15px 0;
+      border-bottom: 1px solid #eeeeee;
+      font-family: Arial, sans-serif;
+      font-size: 0.88rem;
+    }
+
+    /* Sections */
+    section {
+      padding: 25px 0;
+      border-bottom: 1px solid #eeeeee;
+      scroll-margin-top: 15px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1.35rem;
+      font-weight: normal;
+    }
+
+    p {
+      margin: 8px 0 12px;
+    }
+
+    .muted {
+      color: #666666;
+    }
+
+    /* Research and publication lists */
+    ul {
+      padding-left: 23px;
+    }
+
+    li {
+      margin-bottom: 9px;
+    }
+
+    .publication {
+      margin-bottom: 19px;
+    }
+
+    .publication p {
+      margin: 3px 0;
+    }
+
+    .paper-title {
+      font-weight: bold;
+    }
+
+    .date {
+      display: inline-block;
+      min-width: 105px;
+      color: #666666;
+    }
+
+    /* Contact links */
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 17px;
+      margin-top: 12px;
+      font-family: Arial, sans-serif;
+      font-size: 0.92rem;
+    }
+
+    /* Footer */
+    footer {
+      padding-top: 22px;
+      color: #777777;
+      font-size: 0.84rem;
+    }
+
+    @media (max-width: 560px) {
+      body {
+        padding: 22px 18px;
+        font-size: 15px;
+      }
+
+      header {
+        gap: 15px;
+      }
+
+      h1 {
+        font-size: 1.65rem;
+      }
+
+      .profile-photo {
+        width: 85px;
+        height: 105px;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      .date {
+        display: block;
+        margin-bottom: 2px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<h1>Your Name</h1>
+  <!-- HEADER -->
+  <header id="home">
+    <div>
+      <h1>Your Name</h1>
 
-<p>PhD Candidate in Mathematics</p>
+      <p class="affiliation">
+        Your Position<br>
+        Your University or Research Institution
+      </p>
 
-<p>Research interests: Combinatorics, Posets, Simplicial Complexes.</p>
+      <p class="muted">
+        Your City, Country
+      </p>
+    </div>
 
-<h2>Research</h2>
-<p>Short description of your research here.</p>
+    <!-- Optional: place profile.jpg beside index.html -->
+    <img
+      class="profile-photo"
+      src="profile.jpg"
+      alt="Portrait of Your Name"
+    >
+  </header>
 
-<h2>Publications</h2>
-<ul>
-  <li>Paper title, Journal (Year).</li>
-</ul>
+  <!-- NAVIGATION -->
+  <nav aria-label="Main navigation">
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#education">Education</a>
+    <a href="#cv">CV</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>About Me</h2>
+
+      <p>
+        Welcome to my academic website. I am a
+        [your position] at [your institution].
+        My work focuses on [your research field
+        or academic discipline].
+      </p>
+
+      <p>
+        My research interests include [research topic one],
+        [research topic two], and [research topic three].
+        I am interested in understanding important questions
+        in my field and contributing to new knowledge
+        through research and collaboration.
+      </p>
+
+      <p>
+        Outside my research, I enjoy [your interests
+        or other professional activities].
+      </p>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research">
+      <h2>Research Interests</h2>
+
+      <p>
+        My research explores the following areas:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Research Area One:</strong>
+          Briefly describe your interests in this area.
+        </li>
+        <li>
+          <strong>Research Area Two:</strong>
+          Explain the questions or problems you study.
+        </li>
+        <li>
+          <strong>Research Area Three:</strong>
+          Describe your methods, applications, or goals.
+        </li>
+      </ul>
+
+      <h2>Selected Research Projects</h2>
+
+      <p>
+        <strong>Project Title One</strong><br>
+        Briefly describe the project, its objectives,
+        and your contribution.
+      </p>
+
+      <p>
+        <strong>Project Title Two</strong><br>
+        Summarize another research project or
+        ongoing collaboration.
+      </p>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications">
+      <h2>Selected Publications</h2>
+
+      <p class="muted">
+        A selection of my academic publications.
+      </p>
+
+      <div class="publication">
+        <p class="paper-title">
+          Your Actual Paper Title
+        </p>
+        <p>
+          Your Name, Co-author Name.
+          <em>Journal Name</em>, Year.
+        </p>
+        <p>
+          <a href="https://doi.org/YOUR-DOI">
+            DOI / Paper
+          </a>
+        </p>
+      </div>
+
+      <div class="publication">
+        <p class="paper-title">
+          Your Second Paper Title
+        </p>
+        <p>
+          Your Name, Co-author Name.
+          <em>Conference or Journal Name</em>, Year.
+        </p>
+        <p>
+          <a href="https://example.com">
+            Read paper
+          </a>
+        </p>
+      </div>
+
+      <!-- Delete this section if you have no publications yet. -->
+    </section>
+
+    <!-- EDUCATION AND CAREER -->
+    <section id="education">
+      <h2>Education</h2>
+
+      <p>
+        <span class="date">Year–Year</span>
+        <strong>Degree Name</strong><br>
+        University Name, Country
+      </p>
+
+      <p>
+        <span class="date">Year–Year</span>
+        <strong>Previous Degree</strong><br>
+        University Name, Country
+      </p>
+
+      <h2>Academic and Professional Experience</h2>
+
+      <p>
+        <span class="date">Year–Present</span>
+        <strong>Your Current Position</strong><br>
+        Department or Organization, Institution
+      </p>
+
+      <p>
+        <span class="date">Year–Year</span>
+        <strong>Previous Position</strong><br>
+        Organization or Institution
+      </p>
+    </section>
+
+    <!-- CV -->
+    <section id="cv">
+      <h2>Curriculum Vitae</h2>
+
+      <p>
+        For more information about my education,
+        research experience, and professional background,
+        please see my CV.
+      </p>
+
+      <!-- Upload cv.pdf to the same folder as index.html -->
+      <p>
+        <a href="cv.pdf" target="_blank"
+           rel="noopener noreferrer">
+          View my CV (PDF)
+        </a>
+        |
+        <a href="cv.pdf" download>
+          Download CV
+        </a>
+      </p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+
+      <p>
+        I welcome professional inquiries and opportunities
+        for research collaboration.
+      </p>
+
+      <p>
+        Email:
+        <a href="mailto:YOUR-EMAIL@example.com">
+          YOUR-EMAIL@example.com
+        </a>
+      </p>
+
+      <div class="links">
+        <a href="https://scholar.google.com/">
+          Google Scholar
+        </a>
+
+        <a href="https://orcid.org/">
+          ORCID
+        </a>
+
+        <a href="https://github.com/YOUR-USERNAME">
+          GitHub
+        </a>
+
+        <a href="https://www.linkedin.com/">
+          LinkedIn
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      © 2026 Your Name.
+      Academic personal website.
+    </p>
+  </footer>
 
 </body>
 </html>
